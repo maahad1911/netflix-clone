@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Watch TV shows and movies online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23E50914' width='100' height='100'/></svg>">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <h1 class="logo">NETFLIX</h1>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">TV Shows</a></li>
+                <li><a href="#" class="nav-link">Movies</a></li>
+                <li><a href="#" class="nav-link">New & Popular</a></li>
+                <li><a href="#" class="nav-link">My List</a></li>
+            </ul>
+
+            <div class="navbar-user">
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <img src="https://i.pravatar.cc/40?img=1" alt="User Avatar" class="user-avatar">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Stranger Things</h2>
+            <p class="hero-description">When a young boy disappears, his friends, family and local police go on a search for him, and uncover a mystery involving secret government experiments.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-play" onclick="playVideo()">
+                    <span class="play-icon">▶</span> Play
+                </button>
+                <button class="btn btn-info">
+                    <span class="info-icon">ℹ</span> More Info
+                </button>
+            </div>
+        </div>
+
+        <video autoplay muted class="hero-video">
+            <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+        </video>
+        
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Featured Content Section -->
+    <section class="featured-section">
+        <h3 class="section-title">Trending Now</h3>
+        <div class="carousel-container" id="trending">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=1" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Breaking Bad</h4>
+                            <p>⭐ 9.5/10 | 5 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=2" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>The Crown</h4>
+                            <p>⭐ 8.8/10 | 5 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=3" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>The Mandalorian</h4>
+                            <p>⭐ 8.7/10 | 3 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=4" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>The Witcher</h4>
+                            <p>⭐ 8.2/10 | 3 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=5" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Ozark</h4>
+                            <p>⭐ 9.0/10 | 4 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=6" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Chernobyl</h4>
+                            <p>⭐ 9.3/10 | 1 Season</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-prev" onclick="scrollCarousel(event, -1)">❮</button>
+            <button class="carousel-btn carousel-next" onclick="scrollCarousel(event, 1)">❯</button>
+        </div>
+    </section>
+
+    <!-- New Releases Section -->
+    <section class="featured-section">
+        <h3 class="section-title">New & Popular</h3>
+        <div class="carousel-container" id="new-releases">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=7" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Squid Game</h4>
+                            <p>⭐ 8.0/10 | 2 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=8" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Wednesday</h4>
+                            <p>⭐ 8.1/10 | 1 Season</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=9" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>The Last of Us</h4>
+                            <p>⭐ 8.5/10 | 1 Season</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=10" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Dahmer</h4>
+                            <p>⭐ 8.5/10 | 1 Season</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=11" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>The Bear</h4>
+                            <p>⭐ 8.6/10 | 2 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/300/400?random=12" alt="Show Thumbnail" class="item-image">
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Ginny & Georgia</h4>
+                            <p>⭐ 7.6/10 | 2 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-prev" onclick="scrollCarousel(event, -1)">❮</button>
+            <button class="carousel-btn carousel-next" onclick="scrollCarousel(event, 1)">❯</button>
+        </div>
+    </section>
+
+    <!-- Top 10 Section -->
+    <section class="featured-section">
+        <h3 class="section-title">Top 10 in Your Country</h3>
+        <div class="carousel-container" id="top-10">
+            <div class="carousel">
+                <div class="carousel-item top-10-item">
+                    <img src="https://picsum.photos/300/400?random=13" alt="Show Thumbnail" class="item-image">
+                    <div class="top-10-number">1</div>
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Game of Thrones</h4>
+                            <p>⭐ 9.2/10 | 8 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item top-10-item">
+                    <img src="https://picsum.photos/300/400?random=14" alt="Show Thumbnail" class="item-image">
+                    <div class="top-10-number">2</div>
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>The Office</h4>
+                            <p>⭐ 9.0/10 | 9 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item top-10-item">
+                    <img src="https://picsum.photos/300/400?random=15" alt="Show Thumbnail" class="item-image">
+                    <div class="top-10-number">3</div>
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Friends</h4>
+                            <p>⭐ 8.9/10 | 10 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item top-10-item">
+                    <img src="https://picsum.photos/300/400?random=16" alt="Show Thumbnail" class="item-image">
+                    <div class="top-10-number">4</div>
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>The Boys</h4>
+                            <p>⭐ 8.8/10 | 4 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item top-10-item">
+                    <img src="https://picsum.photos/300/400?random=17" alt="Show Thumbnail" class="item-image">
+                    <div class="top-10-number">5</div>
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Sherlock</h4>
+                            <p>⭐ 9.1/10 | 4 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item top-10-item">
+                    <img src="https://picsum.photos/300/400?random=18" alt="Show Thumbnail" class="item-image">
+                    <div class="top-10-number">6</div>
+                    <div class="item-hover">
+                        <button class="play-btn">▶</button>
+                        <div class="item-info">
+                            <h4>Peaky Blinders</h4>
+                            <p>⭐ 8.8/10 | 6 Seasons</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-prev" onclick="scrollCarousel(event, -1)">❮</button>
+            <button class="carousel-btn carousel-next" onclick="scrollCarousel(event, 1)">❯</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Media Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Corporate Info</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="#">📘 Facebook</a></li>
+                    <li><a href="#">𝕏 Twitter</a></li>
+                    <li><a href="#">📷 Instagram</a></li>
+                    <li><a href="#">▶️ YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Netflix Clone. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideo()">&times;</span>
+            <video id="modalVideo" controls width="100%">
+                <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
